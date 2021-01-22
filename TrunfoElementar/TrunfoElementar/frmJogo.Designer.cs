@@ -31,6 +31,8 @@ namespace TrunfoElementar
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmJogo));
             this.gpbJogo = new System.Windows.Forms.GroupBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblContador = new System.Windows.Forms.Label();
@@ -46,8 +48,6 @@ namespace TrunfoElementar
             this.btnJogar = new System.Windows.Forms.Button();
             this.picCarta2 = new System.Windows.Forms.PictureBox();
             this.picCarta1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.gpbJogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCarta2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCarta1)).BeginInit();
@@ -79,12 +79,36 @@ namespace TrunfoElementar
             this.gpbJogo.TabIndex = 3;
             this.gpbJogo.TabStop = false;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.linkLabel1.LinkColor = System.Drawing.Color.MintCream;
+            this.linkLabel1.Location = new System.Drawing.Point(25, 463);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(208, 17);
+            this.linkLabel1.TabIndex = 31;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "https://kcd-elements.tumblr.com";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(25, 412);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(192, 51);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "As imagens das cartas \r\nsão da artista:  Kaycie D.\r\nAcesse para saber mais:";
+            // 
             // btnSair
             // 
             this.btnSair.BackColor = System.Drawing.Color.Black;
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSair.ForeColor = System.Drawing.Color.White;
-            this.btnSair.Location = new System.Drawing.Point(353, 470);
+            this.btnSair.Location = new System.Drawing.Point(353, 451);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(298, 29);
             this.btnSair.TabIndex = 29;
@@ -97,7 +121,7 @@ namespace TrunfoElementar
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(323, 166);
+            this.label1.Location = new System.Drawing.Point(323, 170);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(128, 24);
             this.label1.TabIndex = 28;
@@ -109,7 +133,7 @@ namespace TrunfoElementar
             this.lblContador.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblContador.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContador.ForeColor = System.Drawing.Color.White;
-            this.lblContador.Location = new System.Drawing.Point(353, 194);
+            this.lblContador.Location = new System.Drawing.Point(353, 198);
             this.lblContador.Name = "lblContador";
             this.lblContador.Size = new System.Drawing.Size(298, 23);
             this.lblContador.TabIndex = 25;
@@ -120,7 +144,7 @@ namespace TrunfoElementar
             this.btnNovo.BackColor = System.Drawing.Color.Black;
             this.btnNovo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNovo.ForeColor = System.Drawing.Color.White;
-            this.btnNovo.Location = new System.Drawing.Point(353, 400);
+            this.btnNovo.Location = new System.Drawing.Point(353, 381);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(298, 29);
             this.btnNovo.TabIndex = 24;
@@ -133,7 +157,7 @@ namespace TrunfoElementar
             this.btnRetornar.BackColor = System.Drawing.Color.Black;
             this.btnRetornar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRetornar.ForeColor = System.Drawing.Color.White;
-            this.btnRetornar.Location = new System.Drawing.Point(353, 435);
+            this.btnRetornar.Location = new System.Drawing.Point(353, 416);
             this.btnRetornar.Name = "btnRetornar";
             this.btnRetornar.Size = new System.Drawing.Size(298, 29);
             this.btnRetornar.TabIndex = 23;
@@ -147,7 +171,7 @@ namespace TrunfoElementar
             this.lblResultado.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResultado.ForeColor = System.Drawing.Color.White;
-            this.lblResultado.Location = new System.Drawing.Point(353, 136);
+            this.lblResultado.Location = new System.Drawing.Point(353, 140);
             this.lblResultado.Name = "lblResultado";
             this.lblResultado.Size = new System.Drawing.Size(298, 23);
             this.lblResultado.TabIndex = 22;
@@ -159,7 +183,7 @@ namespace TrunfoElementar
             this.lblOpcao.AutoSize = true;
             this.lblOpcao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOpcao.ForeColor = System.Drawing.Color.White;
-            this.lblOpcao.Location = new System.Drawing.Point(323, 19);
+            this.lblOpcao.Location = new System.Drawing.Point(323, 23);
             this.lblOpcao.Name = "lblOpcao";
             this.lblOpcao.Size = new System.Drawing.Size(295, 24);
             this.lblOpcao.TabIndex = 21;
@@ -170,7 +194,7 @@ namespace TrunfoElementar
             this.rdNumeroAtomico.AutoSize = true;
             this.rdNumeroAtomico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdNumeroAtomico.ForeColor = System.Drawing.Color.White;
-            this.rdNumeroAtomico.Location = new System.Drawing.Point(510, 44);
+            this.rdNumeroAtomico.Location = new System.Drawing.Point(510, 48);
             this.rdNumeroAtomico.Name = "rdNumeroAtomico";
             this.rdNumeroAtomico.Size = new System.Drawing.Size(139, 20);
             this.rdNumeroAtomico.TabIndex = 20;
@@ -182,7 +206,7 @@ namespace TrunfoElementar
             this.rdRaioAtomico.AutoSize = true;
             this.rdRaioAtomico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdRaioAtomico.ForeColor = System.Drawing.Color.White;
-            this.rdRaioAtomico.Location = new System.Drawing.Point(336, 44);
+            this.rdRaioAtomico.Location = new System.Drawing.Point(336, 48);
             this.rdRaioAtomico.Name = "rdRaioAtomico";
             this.rdRaioAtomico.Size = new System.Drawing.Size(118, 20);
             this.rdRaioAtomico.TabIndex = 19;
@@ -193,7 +217,7 @@ namespace TrunfoElementar
             // 
             this.lblX.AutoSize = true;
             this.lblX.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblX.Location = new System.Drawing.Point(489, 82);
+            this.lblX.Location = new System.Drawing.Point(489, 86);
             this.lblX.Name = "lblX";
             this.lblX.Size = new System.Drawing.Size(21, 20);
             this.lblX.TabIndex = 18;
@@ -205,7 +229,7 @@ namespace TrunfoElementar
             this.lblPontosJogador1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblPontosJogador1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPontosJogador1.ForeColor = System.Drawing.Color.White;
-            this.lblPontosJogador1.Location = new System.Drawing.Point(353, 81);
+            this.lblPontosJogador1.Location = new System.Drawing.Point(353, 85);
             this.lblPontosJogador1.Name = "lblPontosJogador1";
             this.lblPontosJogador1.Size = new System.Drawing.Size(130, 23);
             this.lblPontosJogador1.TabIndex = 17;
@@ -218,7 +242,7 @@ namespace TrunfoElementar
             this.lblPontosJogador2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblPontosJogador2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPontosJogador2.ForeColor = System.Drawing.Color.White;
-            this.lblPontosJogador2.Location = new System.Drawing.Point(515, 81);
+            this.lblPontosJogador2.Location = new System.Drawing.Point(515, 85);
             this.lblPontosJogador2.Name = "lblPontosJogador2";
             this.lblPontosJogador2.Size = new System.Drawing.Size(130, 23);
             this.lblPontosJogador2.TabIndex = 16;
@@ -230,7 +254,7 @@ namespace TrunfoElementar
             this.btnJogar.BackColor = System.Drawing.Color.Black;
             this.btnJogar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnJogar.ForeColor = System.Drawing.Color.White;
-            this.btnJogar.Location = new System.Drawing.Point(353, 365);
+            this.btnJogar.Location = new System.Drawing.Point(353, 346);
             this.btnJogar.Name = "btnJogar";
             this.btnJogar.Size = new System.Drawing.Size(298, 29);
             this.btnJogar.TabIndex = 15;
@@ -243,7 +267,7 @@ namespace TrunfoElementar
             this.picCarta2.BackColor = System.Drawing.Color.Transparent;
             this.picCarta2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picCarta2.BackgroundImage")));
             this.picCarta2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picCarta2.Location = new System.Drawing.Point(681, 19);
+            this.picCarta2.Location = new System.Drawing.Point(670, 21);
             this.picCarta2.Name = "picCarta2";
             this.picCarta2.Size = new System.Drawing.Size(300, 320);
             this.picCarta2.TabIndex = 1;
@@ -254,44 +278,21 @@ namespace TrunfoElementar
             this.picCarta1.BackColor = System.Drawing.Color.Transparent;
             this.picCarta1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picCarta1.BackgroundImage")));
             this.picCarta1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picCarta1.Location = new System.Drawing.Point(10, 19);
+            this.picCarta1.Location = new System.Drawing.Point(21, 21);
             this.picCarta1.Name = "picCarta1";
             this.picCarta1.Size = new System.Drawing.Size(300, 320);
             this.picCarta1.TabIndex = 0;
             this.picCarta1.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(7, 429);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(192, 51);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "As imagens das cartas \r\nsão da artista:  Kaycie D.\r\nAcesse para saber mais:";
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.linkLabel1.LinkColor = System.Drawing.Color.MintCream;
-            this.linkLabel1.Location = new System.Drawing.Point(7, 480);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(208, 17);
-            this.linkLabel1.TabIndex = 31;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "https://kcd-elements.tumblr.com";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // frmJogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1015, 529);
             this.Controls.Add(this.gpbJogo);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmJogo";
